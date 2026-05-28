@@ -5,6 +5,7 @@ import {CartPage} from '../pages/CartPage';
 import {CheckoutPage} from '../pages/CheckoutPage';
 import {CheckoutOverviewPage} from '../pages/CheckoutOverviewPage';
 import {CheckoutCompletePage} from '../pages/CheckoutCompletePage';
+import {LogoutPage} from '../pages/LogoutPage';
 
 type Fixtures={
     loginPage:LoginPage,
@@ -12,8 +13,8 @@ type Fixtures={
     cartPage:CartPage,
     checkoutPage:CheckoutPage,
     overviewPage:CheckoutOverviewPage,
-    completePage:CheckoutCompletePage
-
+    completePage:CheckoutCompletePage,
+    logoutPage:LogoutPage
 };
 
 export const test= base.extend<Fixtures>({
@@ -34,7 +35,11 @@ export const test= base.extend<Fixtures>({
     },
     completePage:async({page},use)=>{
         await use(new CheckoutCompletePage(page));
+    },
+    logoutPage:async({page},use)=>{
+        await use(new LogoutPage(page));
     }
 });
 
 export const expect=base.expect; 
+
