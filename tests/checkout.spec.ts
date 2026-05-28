@@ -8,7 +8,9 @@ test('Complete Flow',async({
  cartPage,
  checkoutPage,
  overviewPage,
- completePage
+ completePage,
+ logoutPage
+
 })=>{
   await loginPage.goto();
   await loginPage.login(users.validUser.username, users.validUser.password );
@@ -21,4 +23,7 @@ test('Complete Flow',async({
 
   await overviewPage.finishorder();
   await expect(completePage.successMsg).toHaveText('Thank you for your order!');
+
+  await logoutPage.Burgermenu();
+  await logoutPage.Logout();
 });
