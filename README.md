@@ -62,3 +62,4 @@ npx playwright test tests/login.spec.ts
 # Author:
 Swetha Aligety  
 QA Automation Engineer | Playwright + TypeScript  
+updated Readme to trigeer CI
