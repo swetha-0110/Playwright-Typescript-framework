@@ -5,7 +5,7 @@ export default defineConfig({
   testDir: './tests',
   reporter: [['html', { outputFolder: 'playwright-report', open: 'on-failure' }]],
   use: {
-    headless: false,
+    headless: true,
     screenshot: 'on',
     video: 'retain-on-failure',
     trace: 'on-first-retry',
